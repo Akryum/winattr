@@ -74,14 +74,14 @@ winattr.setSync("path/to/folder/", {readonly:true});
 * 0.2.3 specify which script engine to use in `useExec()` "mode"
 * 0.2.2 switched from `fswin.find()` to `fswin.getAttributes()` now that it's available, tested non-existent files
 * 0.2.1 nearly pointless fix
-* 0.2.0 added [fswin](https://npmjs.org/package/fswin),`useExec()`,`useNative()`
+* 0.2.0 added [fswin](https://npmjs.com/fswin),`useExec()`,`useNative()`
 * 0.1.2 tested on Windows
 * 0.1.1 package.json optimization
 * 0.1.0 initial release
 
 
 [npm-image]: https://img.shields.io/npm/v/winattr.svg
-[npm-url]: https://npmjs.org/package/winattr
+[npm-url]: https://npmjs.com/package/winattr
 [travis-image]: https://img.shields.io/travis/stevenvachon/winattr.svg?label=linux
 [travis-url]: https://travis-ci.org/stevenvachon/winattr
 [appveyor-image]: https://img.shields.io/appveyor/ci/stevenvachon/winattr.svg?label=windows
