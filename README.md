@@ -32,45 +32,65 @@ yarn add @akryum/winattr
 ## Usage
 
 ### `get(path, callback)`
+
 `path` - Path to file or directory
 `callback(err,attrs)` - A callback which is called upon completion
+
 ```js
-winattr.get("path/to/file.ext", function(err, attrs) {
-  if (err == null) console.log(attrs);
-});
+winattr.get('path/to/file.ext', (err, attrs) => {
+  if (err == null) console.log(attrs)
+})
 ```
 
-If you omit the callback, a Promise will be return instead.
+If you omit the callback, a Promise will be return instead:
+
+```js
+winattr.get('path/to/file.ext').then(attrs => {
+  console.log(attrs)
+})
+```
 
 ### `getSync(path)`
+
 `path` - Path to file or directory
 
 Returns an `Object` or throws an error if the file or dir cannot be found/accessed.
-```js
-var attrs = winattr.getSync("path/to/file.ext");
 
-console.log(attrs);
+```js
+const attrs = winattr.getSync('path/to/file.ext')
+
+console.log(attrs)
 ```
 
 ### `set(path, attrs, callback)`
+
 `path` - Path to file or directory
 `attrs` - An object containing attributes to change
 `callback(err)` - A callback which is called upon completion
+
 ```js
-winattr.set("path/to/folder/", {readonly:true}, function(err) {
-  if (err == null) console.log("success");
-});
+winattr.set('path/to/folder/', { readonly: true }, err => {
+  if (err == null) console.log('success')
+})
 ```
 
-If you omit the callback, a Promise will be return instead.
+If you omit the callback, a Promise will be return instead:
+
+```js
+winattr.set('path/to/folder/', { readonly: true }).then(() => {
+  console.log('success')
+})
+```
 
 ### `setSync(path, attrs)`
+
 `path` - Path to file or directory
 `attrs` - An object containing attributes to change
 
 Throws an error if the file or dir cannot be found/accessed.
+
 ```js
-winattr.setSync("path/to/folder/", {readonly:true});
+winattr.setSync('path/to/folder/', { readonly: true })
 ```
 
 [npm-image]: https://img.shields.io/npm/v/@akryum/winattr.svg
