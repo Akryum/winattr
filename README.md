@@ -36,7 +36,7 @@ yarn add @akryum/winattr
 `callback(err,attrs)` - A callback which is called upon completion
 ```js
 winattr.get("path/to/file.ext", function(err, attrs) {
-	if (err == null) console.log(attrs);
+  if (err == null) console.log(attrs);
 });
 ```
 
@@ -58,7 +58,7 @@ console.log(attrs);
 `callback(err)` - A callback which is called upon completion
 ```js
 winattr.set("path/to/folder/", {readonly:true}, function(err) {
-	if (err == null) console.log("success");
+  if (err == null) console.log("success");
 });
 ```
 
