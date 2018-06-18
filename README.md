@@ -17,7 +17,7 @@ A native binding is used, offering great performance. As a contingency in case t
 
 It may go without saying, but this library is not intended to run on anything other than Windows.
 
-[Node.js](http://nodejs.org/) `>= 4` is required. To install, type this at the command line:
+[Node.js](http://nodejs.org/) `>= 8` is required. To install, type this at the command line:
 
 ```
 npm install @akryum/winattr
@@ -73,11 +73,11 @@ Throws an error if the file or dir cannot be found/accessed.
 winattr.setSync("path/to/folder/", {readonly:true});
 ```
 
-[npm-image]: https://img.shields.io/npm/v/winattr.svg
-[npm-url]: https://npmjs.com/package/winattr
-[travis-image]: https://img.shields.io/travis/stevenvachon/winattr.svg?label=linux
-[travis-url]: https://travis-ci.org/stevenvachon/winattr
-[appveyor-image]: https://img.shields.io/appveyor/ci/stevenvachon/winattr.svg?label=windows
-[appveyor-url]: https://ci.appveyor.com/project/stevenvachon/winattr
-[david-image]: https://img.shields.io/david/stevenvachon/winattr.svg
-[david-url]: https://david-dm.org/stevenvachon/winattr
+[npm-image]: https://img.shields.io/npm/v/@akryum/winattr.svg
+[npm-url]: https://npmjs.com/package/@akryum/winattr
+[travis-image]: https://img.shields.io/travis/Akryum/winattr.svg?label=linux
+[travis-url]: https://travis-ci.org/Akryum/winattr
+[appveyor-image]: https://img.shields.io/appveyor/ci/Akryum/winattr.svg?label=windows
+[appveyor-url]: https://ci.appveyor.com/project/Akryum/winattr
+[david-image]: https://img.shields.io/david/Akryum/winattr.svg
+[david-url]: https://david-dm.org/Akryum/winattr
