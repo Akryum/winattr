@@ -1,4 +1,4 @@
-# winattr [![NPM Version][npm-image]][npm-url] [![Linux Build][travis-image]][travis-url] [![Windows Build][appveyor-image]][appveyor-url] [![Dependency Status][david-image]][david-url]
+# @akryum/winattr [![NPM Version][npm-image]][npm-url] [![Linux Build][travis-image]][travis-url] [![Windows Build][appveyor-image]][appveyor-url] [![Dependency Status][david-image]][david-url]
 
 > Foolproof Windows® file attributes for Node.js
 
@@ -34,7 +34,7 @@ yarn add @akryum/winattr
 ### `get(path, callback)`
 
 `path` - Path to file or directory
-`callback(err,attrs)` - A callback which is called upon completion
+`callback(err,attrs)` - A callback which is called upon completion.
 
 ```js
 winattr.get('path/to/file.ext', (err, attrs) => {
@@ -66,7 +66,7 @@ console.log(attrs)
 
 `path` - Path to file or directory
 `attrs` - An object containing attributes to change
-`callback(err)` - A callback which is called upon completion
+`callback(err)` - A callback which is called upon completion.
 
 ```js
 winattr.set('path/to/folder/', { readonly: true }, err => {
