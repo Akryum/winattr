@@ -18,24 +18,32 @@ A native binding is used, offering great performance. As a contingency in case t
 It may go without saying, but this library is not intended to run on anything other than Windows.
 
 [Node.js](http://nodejs.org/) `>= 4` is required. To install, type this at the command line:
+
 ```
-npm install winattr
+npm install @akryum/winattr
 ```
 
+Or:
 
-## Methods
+```
+yarn add @akryum/winattr
+```
+
+## Usage
 
 ### `get(path, callback)`
-`path` - Path to file or directory  
-`callback(err,attrs)` - A callback which is called upon completion  
+`path` - Path to file or directory
+`callback(err,attrs)` - A callback which is called upon completion
 ```js
 winattr.get("path/to/file.ext", function(err, attrs) {
 	if (err == null) console.log(attrs);
 });
 ```
 
+If you omit the callback, a Promise will be return instead.
+
 ### `getSync(path)`
-`path` - Path to file or directory  
+`path` - Path to file or directory
 
 Returns an `Object` or throws an error if the file or dir cannot be found/accessed.
 ```js
@@ -45,40 +53,25 @@ console.log(attrs);
 ```
 
 ### `set(path, attrs, callback)`
-`path` - Path to file or directory  
-`attrs` - An object containing attributes to change  
-`callback(err)` - A callback which is called upon completion  
+`path` - Path to file or directory
+`attrs` - An object containing attributes to change
+`callback(err)` - A callback which is called upon completion
 ```js
 winattr.set("path/to/folder/", {readonly:true}, function(err) {
 	if (err == null) console.log("success");
 });
 ```
 
+If you omit the callback, a Promise will be return instead.
+
 ### `setSync(path, attrs)`
-`path` - Path to file or directory  
-`attrs` - An object containing attributes to change  
+`path` - Path to file or directory
+`attrs` - An object containing attributes to change
 
 Throws an error if the file or dir cannot be found/accessed.
 ```js
 winattr.setSync("path/to/folder/", {readonly:true});
 ```
-
-
-## Changelog
-* 2.0.0 removed support for Node.js v0.10 and v0.12
-* 1.1.0 added binding support to Node.js v4
-* 1.0.0
-  * added `getSync()`,`setSync()`
-  * removed `useExec()`,`useNative()`
-  * uses binding by default, with auto-fallback to shell
-* 0.2.3 specify which script engine to use in `useExec()` "mode"
-* 0.2.2 switched from `fswin.find()` to `fswin.getAttributes()` now that it's available, tested non-existent files
-* 0.2.1 nearly pointless fix
-* 0.2.0 added [fswin](https://npmjs.com/fswin),`useExec()`,`useNative()`
-* 0.1.2 tested on Windows
-* 0.1.1 package.json optimization
-* 0.1.0 initial release
-
 
 [npm-image]: https://img.shields.io/npm/v/winattr.svg
 [npm-url]: https://npmjs.com/package/winattr
